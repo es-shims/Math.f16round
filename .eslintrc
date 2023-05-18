@@ -1,0 +1,23 @@
+{
+	"root": true,
+
+	"extends": "@ljharb",
+
+	"rules": {
+		"func-style": "off",
+		"new-cap": ["error", {
+			"capIsNewExceptions": [
+				"ToNumber",
+			],
+		}],
+	},
+
+	"overrides": [
+		{
+			"files": "test/**/*.js",
+			"rules": {
+				"max-lines-per-function": "off",
+			},
+		},
+	],
+}
