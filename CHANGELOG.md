@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.1](https://github.com/es-shims/Math.f16round/compare/v1.0.0...v1.0.1) - 2023-09-01
+
+### Commits
+
+- [Dev Deps] update `@ljharb/eslint-config`, `aud`, `reflect.ownkeys`, `tape` [`b20bad7`](https://github.com/es-shims/Math.f16round/commit/b20bad70a0522c1a9fc2d3811dcdff1470b3e503)
+- [Deps] update `es-abstract` [`b55be70`](https://github.com/es-shims/Math.f16round/commit/b55be70144aa11a219ff8617c60a41d8c2e0d505)
+
 ## v1.0.0 - 2023-05-17
 
 ### Commits
