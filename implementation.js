@@ -1,6 +1,6 @@
 'use strict';
 
-var ToNumber = require('es-abstract/2023/ToNumber');
+var ToNumber = require('es-abstract/2024/ToNumber');
 var $isFinite = isFinite;
 
 var isNaN = require('is-nan');
