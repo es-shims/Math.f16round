@@ -19,5 +19,11 @@
 				"max-lines-per-function": "off",
 			},
 		},
+		{
+			"files": "test/byteConversionValues.js",
+			"rules": {
+				"no-loss-of-precision": "warn",
+			},
+		},
 	],
 }

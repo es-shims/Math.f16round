@@ -1,11 +1,14 @@
 'use strict';
 
 var hasBigInts = require('has-bigints')();
+var forEach = require('es-abstract/helpers/forEach');
 
 var maxValue = Number.MAX_VALUE || 1.7976931348623157e+308;
 var minValue = Number.MIN_VALUE || 5e-324;
 var maxFloat16 = 65504;
 var minFloat16 = Math.pow(2, -24);
+
+var byteConversionValues = require('./byteConversionValues');
 
 module.exports = function (f16round, t) {
 	t.equal(f16round(), NaN, 'returns NaN when value is absent');
@@ -70,6 +73,21 @@ module.exports = function (f16round, t) {
 
 		st.equal(f16round(valueOfIsInfinity), Infinity, 'f16round(valueOfIsInfinity)');
 		st.equal(f16round(valueOfIsNaN), NaN, 'f16round(valueOfIsNaN)');
+
+		st.end();
+	});
+
+	t.test('test262: test/built-ins/Math/f16round/value-conversion.js', function (st) {
+		var values = byteConversionValues.values;
+		var expectedValues = byteConversionValues.expected.Float16;
+
+		forEach(values, function (value, i) {
+			var expected = expectedValues[i];
+
+			var result = Math.f16round(value);
+
+			st.equal(result, expected, 'value: ' + value);
+		});
 
 		st.end();
 	});
