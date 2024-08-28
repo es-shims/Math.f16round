@@ -9,7 +9,7 @@ var abs = Math.abs;
 
 var BINARY_16_EPSILON = 0.0009765625; // 2 ** -10
 var BINARY_16_MIN_VALUE = 6.103515625e-05; // 2 ** -14
-var BINARY_16_MAX_VALUE = 65504; // 2 ** 15 - 2 ** 10
+var BINARY_16_MAX_VALUE = 65504; // 2 ** 16 - 2 ** (16 - 11)
 var EPSILON = 2.220446049250313e-16; // Number.EPSILON
 
 var inverseEpsilon = 1 / EPSILON;
